@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plano de Estudo CPA — ANBIMA 2026</title>
+<style>
+:root {
+  --primary: #1a3a5c;
+  --accent: #0e7c7b;
+  --gold: #f5a623;
+  --green: #27ae60;
+  --red: #e74c3c;
+  --bg: #f0f4f8;
+  --surface: #ffffff;
+  --text: #2c3e50;
+  --muted: #6b7a8d;
+  --border: #dde3ea;
+  --mod1: #1a3a5c;
+  --mod2: #0e7c7b;
+  --mod3: #8e44ad;
+  --mod4: #c0392b;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+/* HEADER */
+.header { background: linear-gradient(135deg, #1a3a5c 0%, #0e7c7b 100%); color: white; padding: 36px 40px 28px; position: relative; overflow: hidden; }
+.header::after { content: ''; position: absolute; right: -60px; top: -60px; width: 300px; height: 300px; border-radius: 50%; background: rgba(255,255,255,0.05); }
+.header-tag { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 6px; }
+.header h1 { font-size: 28px; font-weight: 800; margin-bottom: 6px; }
+.header p { font-size: 14px; color: rgba(255,255,255,0.75); max-width: 700px; }
+.header-badges { display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
+.badge { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); border-radius: 20px; padding: 6px 14px; font-size: 12px; font-weight: 600; color: white; }
+.badge.gold { background: rgba(245,166,35,0.25); border-color: #f5a623; color: #f5a623; }
+
+/* NAV */
+.nav { background: var(--primary); display: flex; gap: 0; overflow-x: auto; border-bottom: 3px solid var(--accent); }
+.nav a { color: rgba(255,255,255,0.7); text-decoration: none; padding: 14px 20px; font-size: 13px; font-weight: 600; white-space: nowrap; transition: all 0.2s; border-bottom: 3px solid transparent; margin-bottom: -3px; }
+.nav a:hover, .nav a.active { color: white; background: rgba(255,255,255,0.08); border-bottom-color: var(--gold); }
+
+/* MAIN */
+.container { max-width: 1200px; margin: 0 auto; padding: 32px 24px; }
+
+/* SECTIONS */
+.section { background: var(--surface); border-radius: 12px; padding: 28px 32px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid var(--accent); }
+.section.mod1 { border-left-color: var(--mod1); }
+.section.mod2 { border-left-color: var(--mod2); }
+.section.mod3 { border-left-color: var(--mod3); }
+.section.mod4 { border-left-color: var(--mod4); }
+.section-title { font-size: 18px; font-weight: 800; color: var(--primary); margin-bottom: 6px; display: flex; align-items: center; gap: 10px; }
+.section-sub { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+.section-label { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 4px; }
+
+/* KPI GRID */
+.kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 16px; margin-bottom: 28px; }
+.kpi { background: var(--bg); border-radius: 10px; padding: 18px 20px; border: 1px solid var(--border); }
+.kpi-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 6px; }
+.kpi-value { font-size: 28px; font-weight: 800; color: var(--primary); }
+.kpi-note { font-size: 12px; color: var(--muted); margin-top: 4px; }
+.kpi.green .kpi-value { color: var(--green); }
+.kpi.gold .kpi-value { color: var(--gold); }
+.kpi.red .kpi-value { color: var(--red); }
+
+/* TABLE */
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th { background: var(--primary); color: white; padding: 10px 14px; text-align: left; font-size: 11px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; }
+td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+tr:hover td { background: #f8f9fc; }
+tr:last-child td { border-bottom: none; }
+.tbl-wrap { overflow-x: auto; border-radius: 8px; border: 1px solid var(--border); }
+
+/* MÓDULO CARDS */
+.mod-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.mod-card { border-radius: 12px; padding: 24px; color: white; position: relative; overflow: hidden; }
+.mod-card.m1 { background: linear-gradient(135deg, #1a3a5c, #2b5278); }
+.mod-card.m2 { background: linear-gradient(135deg, #0e7c7b, #1aaa88); }
+.mod-card.m3 { background: linear-gradient(135deg, #8e44ad, #a855c8); }
+.mod-card.m4 { background: linear-gradient(135deg, #c0392b, #e05a4a); }
+.mod-card::after { content: ''; position: absolute; right: -20px; bottom: -20px; width: 100px; height: 100px; border-radius: 50%; background: rgba(255,255,255,0.08); }
+.mod-num { font-size: 40px; font-weight: 900; opacity: 0.2; position: absolute; right: 20px; top: 12px; }
+.mod-title { font-size: 15px; font-weight: 800; margin-bottom: 8px; }
+.mod-sub { font-size: 12px; opacity: 0.85; margin-bottom: 14px; line-height: 1.5; }
+.mod-topics { font-size: 11px; opacity: 0.7; }
+
+/* PILL / TAG */
+.pill { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 700; margin: 2px; }
+.pill.blue { background: #e8f0fe; color: #1a56db; }
+.pill.green { background: #e8f9ee; color: #1a7a3b; }
+.pill.red { background: #fde8e8; color: #c0392b; }
+.pill.orange { background: #fff3e0; color: #e67e22; }
+.pill.purple { background: #f3e8ff; color: #7c3aed; }
+
+/* ROADMAP */
+.roadmap { display: flex; flex-direction: column; gap: 0; position: relative; padding-left: 40px; }
+.roadmap::before { content: ''; position: absolute; left: 18px; top: 0; bottom: 0; width: 2px; background: var(--border); }
+.road-item { position: relative; padding: 16px 0 16px 20px; }
+.road-item::before { content: ''; position: absolute; left: -30px; top: 24px; width: 14px; height: 14px; border-radius: 50%; border: 3px solid var(--accent); background: white; z-index: 1; }
+.road-item.active::before { background: var(--accent); }
+.road-phase { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); }
+.road-title { font-size: 15px; font-weight: 700; color: var(--primary); }
+.road-desc { font-size: 13px; color: var(--muted); margin-top: 4px; }
+
+/* WEEK CARDS */
+.week-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 18px; }
+.week-card { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+.week-header { padding: 12px 16px; font-weight: 700; font-size: 13px; color: white; display: flex; justify-content: space-between; align-items: center; }
+.week-header.w1, .week-header.w2 { background: var(--mod1); }
+.week-header.w3, .week-header.w4 { background: var(--mod2); }
+.week-header.w5, .week-header.w6 { background: var(--mod3); }
+.week-header.w7, .week-header.w8 { background: var(--mod4); }
+.week-header.w9, .week-header.w10 { background: #d35400; }
+.week-header.w11, .week-header.w12 { background: #1a3a5c; }
+.week-body { padding: 14px 16px; }
+.week-row { display: flex; gap: 8px; margin-bottom: 8px; font-size: 12px; }
+.week-icon { flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; }
+.week-icon.book { background: #e8f0fe; color: #1a56db; }
+.week-icon.tool { background: #e8f9ee; color: #1a7a3b; }
+.week-icon.target { background: #fff3e0; color: #e67e22; }
+.week-icon.quiz { background: #fde8e8; color: #c0392b; }
+
+/* FLASHCARD */
+.flashcard-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+.flashcard { perspective: 600px; height: 160px; cursor: pointer; }
+.flashcard-inner { position: relative; width: 100%; height: 100%; transition: transform 0.5s; transform-style: preserve-3d; }
+.flashcard:hover .flashcard-inner, .flashcard.flipped .flashcard-inner { transform: rotateY(180deg); }
+.fc-front, .fc-back { position: absolute; inset: 0; border-radius: 10px; padding: 20px; backface-visibility: hidden; display: flex; flex-direction: column; justify-content: center; }
+.fc-front { background: var(--primary); color: white; border: 2px solid #2b5278; }
+.fc-back { background: var(--accent); color: white; transform: rotateY(180deg); }
+.fc-label { font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; opacity: 0.7; margin-bottom: 8px; }
+.fc-q { font-size: 14px; font-weight: 600; line-height: 1.4; }
+.fc-hint { font-size: 11px; opacity: 0.6; margin-top: 8px; }
+
+/* QUESTÃO SIMULADA */
+.questao { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-bottom: 16px; }
+.q-header { background: var(--bg); padding: 12px 18px; font-size: 12px; color: var(--muted); font-weight: 600; display: flex; justify-content: space-between; }
+.q-body { padding: 18px; }
+.q-enunciado { font-size: 14px; line-height: 1.7; margin-bottom: 16px; color: var(--text); }
+.q-alternativa { display: flex; gap: 12px; padding: 10px 14px; border-radius: 8px; margin-bottom: 6px; cursor: pointer; transition: background 0.15s; font-size: 13px; border: 1px solid transparent; }
+.q-alternativa:hover { background: #f0f4f8; }
+.q-alternativa.correta { background: #e8f9ee; border-color: var(--green); color: #1a7a3b; }
+.q-alternativa.errada { background: #fde8e8; border-color: var(--red); color: var(--red); }
+.q-alternativa .letra { width: 24px; height: 24px; border-radius: 50%; background: var(--border); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 11px; flex-shrink: 0; }
+.q-gabarito { background: #e8f9ee; border-radius: 8px; padding: 14px 18px; margin-top: 14px; font-size: 13px; border-left: 4px solid var(--green); display: none; }
+.btn-ver { margin-top: 12px; padding: 8px 18px; background: var(--primary); color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 700; }
+
+/* CHECKLIST */
+.check-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.check-card { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+.check-head { background: var(--primary); color: white; padding: 12px 16px; font-weight: 700; font-size: 13px; }
+.check-body { padding: 14px 16px; }
+.check-item { display: flex; align-items: flex-start; gap: 10px; padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+.check-item:last-child { border-bottom: none; }
+.check-item input[type=checkbox] { margin-top: 2px; accent-color: var(--accent); flex-shrink: 0; }
+
+/* METODO */
+.metodo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.metodo-card { border-radius: 10px; padding: 20px; border: 1px solid var(--border); }
+.metodo-icon { font-size: 28px; margin-bottom: 10px; }
+.metodo-title { font-size: 14px; font-weight: 800; color: var(--primary); margin-bottom: 8px; }
+.metodo-text { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+/* ROTINA */
+.rotina-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; }
+.dia-card { border-radius: 8px; overflow: hidden; font-size: 12px; }
+.dia-header { background: var(--primary); color: white; text-align: center; padding: 6px; font-weight: 700; font-size: 11px; }
+.dia-body { padding: 10px 8px; background: white; border: 1px solid var(--border); border-top: none; border-radius: 0 0 8px 8px; }
+.dia-slot { padding: 4px 6px; border-radius: 4px; margin-bottom: 4px; font-size: 10px; font-weight: 600; }
+.dia-slot.teoria { background: #e8f0fe; color: #1a56db; }
+.dia-slot.pratica { background: #e8f9ee; color: #1a7a3b; }
+.dia-slot.revisao { background: #fff3e0; color: #e67e22; }
+.dia-slot.simulado { background: #fde8e8; color: var(--red); }
+.dia-slot.livre { background: var(--bg); color: var(--muted); }
+
+/* DIALOG TREE */
+.dialog-box { background: #f8f9fc; border-radius: 10px; padding: 20px; border: 1px solid var(--border); }
+.dialog-msg { display: flex; gap: 12px; margin-bottom: 14px; }
+.dialog-msg.cliente .bubble { background: #e8f0fe; color: var(--text); }
+.dialog-msg.agente .bubble { background: var(--primary); color: white; margin-left: auto; flex-direction: row-reverse; }
+.dialog-msg.agente { flex-direction: row-reverse; }
+.avatar { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--bg); }
+.bubble { border-radius: 12px; padding: 10px 14px; font-size: 13px; max-width: 75%; line-height: 1.5; }
+
+/* FUNDO TELAS */
+.screen { display: none; }
+.screen.active { display: block; }
+
+/* PROGRESSO */
+.progress-bar { height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; margin-top: 6px; }
+.progress-fill { height: 100%; border-radius: 4px; transition: width 0.4s; }
+
+/* FOOTER */
+.footer { background: var(--primary); color: rgba(255,255,255,0.6); text-align: center; padding: 20px; font-size: 12px; margin-top: 40px; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .rotina-grid { grid-template-columns: repeat(3, 1fr); }
+  .header { padding: 24px 20px; }
+  .container { padding: 20px 16px; }
+  .section { padding: 20px 18px; }
+  .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-tag">ANBIMA Edu · Edital versão 1.2 · Abril 2026</div>
+  <h1>🎓 Plano de Estudo Completo — CPA 2026</h1>
+  <p>Certificação Profissional ANBIMA de Distribuição · Baseado exclusivamente no edital oficial e na página da certificação</p>
+  <div class="header-badges">
+    <span class="badge">📋 4 Módulos Oficiais</span>
+    <span class="badge">50 Questões · 2h30</span>
+    <span class="badge">70% de acerto para aprovação</span>
+    <span class="badge gold">🆕 Modelo vigente 2026</span>
+    <span class="badge">Reconhecimento EFPA · União Europeia</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<div class="nav">
+  <a href="#estrutura" class="active" onclick="showSection('estrutura',this)">📊 Estrutura do Exame</a>
+  <a href="#modulos" onclick="showSection('modulos',this)">📚 Módulos</a>
+  <a href="#roadmap" onclick="showSection('roadmap',this)">🗺️ Roadmap</a>
+  <a href="#plano-semanal" onclick="showSection('plano-semanal',this)">📅 Plano Semanal</a>
+  <a href="#flashcards" onclick="showSection('flashcards',this)">🃏 Flashcards</a>
+  <a href="#questoes" onclick="showSection('questoes',this)">❓ Questões</a>
+  <a href="#rotina" onclick="showSection('rotina',this)">⏰ Rotina</a>
+  <a href="#dialogo" onclick="showSection('dialogo',this)">💬 Simulação</a>
+  <a href="#checklist" onclick="showSection('checklist',this)">✅ Checklist</a>
+  <a href="#metodo" onclick="showSection('metodo',this)">🧠 Método</a>
+</div>
+
+<div class="container">
+
+<!-- ===================== ESTRUTURA ===================== -->
+<div id="estrutura" class="screen active">
+
+  <div class="section-label">1 · Estrutura do Exame</div>
+
+  <!-- KPIs -->
+  <div class="kpi-grid">
+    <div class="kpi">
+      <div class="kpi-label">Questões na prova</div>
+      <div class="kpi-value">50</div>
+      <div class="kpi-note">40 múltipla escolha + 10 árvore de diálogo</div>
+    </div>
+    <div class="kpi green">
+      <div class="kpi-label">Mínimo para aprovação</div>
+      <div class="kpi-value">35</div>
+      <div class="kpi-note">70% de acerto obrigatório</div>
+    </div>
+    <div class="kpi gold">
+      <div class="kpi-label">Duração da prova</div>
+      <div class="kpi-value">2h30</div>
+      <div class="kpi-note">3 minutos por questão em média</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Módulos oficiais</div>
+      <div class="kpi-value">4</div>
+      <div class="kpi-note">Conforme ANBIMA Edu 2026</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Taxa de inscrição</div>
+      <div class="kpi-value">R$225</div>
+      <div class="kpi-note">Até 10x sem juros · cartão, PIX ou boleto</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Prazo após inscrição</div>
+      <div class="kpi-value">180</div>
+      <div class="kpi-note">Dias para realizar o exame</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📐 Composição da Prova</div>
+    <div class="section-sub">Conforme edital oficial ANBIMA versão 1.2 (10 de abril de 2026)</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th>Formato</th><th>Quantidade</th><th>Descrição</th><th>Como se preparar</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="pill blue">Múltipla escolha contextualizada</span></td>
+            <td><strong>40 questões</strong></td>
+            <td>4 alternativas, apenas uma correta. Enunciado apresenta situação de atendimento real</td>
+            <td>Resolver casos práticos, simular atendimentos, conectar produto ao perfil do cliente</td>
+          </tr>
+          <tr>
+            <td><span class="pill purple">Árvore de diálogo</span></td>
+            <td><strong>10 questões</strong></td>
+            <td>Simula uma conversa real com cliente. Candidato escolhe o próximo passo da conversa</td>
+            <td>Praticar scripts de atendimento, técnica API, saber perguntas certas a fazer ao cliente</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">⚖️ Distribuição de Dificuldade</div>
+    <div class="section-sub">Percentual de questões por nível — foco no médio (50%)</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:4px;">
+      <div style="border-radius:10px;padding:20px;background:#e8f9ee;border:1px solid #a9dfbf;text-align:center;">
+        <div style="font-size:32px;font-weight:900;color:#27ae60">25%</div>
+        <div style="font-weight:700;color:#1a7a3b">Fácil</div>
+        <div style="font-size:12px;color:#666;margin-top:6px">≈ 12 questões · Definições diretas, conceitos básicos</div>
+        <div style="margin-top:8px"><div class="progress-bar"><div class="progress-fill" style="width:25%;background:#27ae60"></div></div></div>
+      </div>
+      <div style="border-radius:10px;padding:20px;background:#fff3e0;border:1px solid #f9ca7e;text-align:center;">
+        <div style="font-size:32px;font-weight:900;color:#e67e22">50%</div>
+        <div style="font-weight:700;color:#c0530e">Médio</div>
+        <div style="font-size:12px;color:#666;margin-top:6px">≈ 25 questões · Aplicação prática, cases, suitability</div>
+        <div style="margin-top:8px"><div class="progress-bar"><div class="progress-fill" style="width:50%;background:#e67e22"></div></div></div>
+      </div>
+      <div style="border-radius:10px;padding:20px;background:#fde8e8;border:1px solid #f5a9a9;text-align:center;">
+        <div style="font-size:32px;font-weight:900;color:#e74c3c">25%</div>
+        <div style="font-weight:700;color:#c0392b">Difícil</div>
+        <div style="font-size:12px;color:#666;margin-top:6px">≈ 13 questões · Pegadinhas, regulação, tributação</div>
+        <div style="margin-top:8px"><div class="progress-bar"><div class="progress-fill" style="width:25%;background:#e74c3c"></div></div></div>
+      </div>
+    </div>
+    <div style="background:#f0f4f8;border-radius:8px;padding:14px 18px;margin-top:16px;font-size:13px;color:var(--muted);">
+      💡 <strong>Estratégia:</strong> Garanta os 12 fáceis + 18 dos 25 médios = 30 acertos. Você precisaria apenas de 5 dos difíceis para aprovar. Foque no nível médio — é onde está a aprovação.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🎯 Competências Avaliadas</div>
+    <div class="section-sub">O que a ANBIMA espera que o profissional CPA saiba fazer</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Competência</th><th>Descrição</th><th>Tipo de cobrança</th></tr></thead>
+        <tbody>
+          <tr><td>Receber pedidos de resgate e aplicação</td><td>Saber processar operações corretamente</td><td><span class="pill blue">Procedimental</span></td></tr>
+          <tr><td>Esclarecer dúvidas sobre produtos</td><td>Explicar características, riscos e rendimentos</td><td><span class="pill green">Conceitual + Prático</span></td></tr>
+          <tr><td>Prospecção e atendimento inicial</td><td>Abordagem, perfil do cliente, suitability básico</td><td><span class="pill purple">Caso prático · Árvore</span></td></tr>
+          <tr><td>Conhecimento regulatório básico</td><td>SFN, órgãos, regras de distribuição</td><td><span class="pill orange">Interpretação</span></td></tr>
+          <tr><td>Inovações do mercado</td><td>Criptoativos, tokenização, DeFi, Sandbox</td><td><span class="pill blue">Conceitual</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">ℹ️ Informações Logísticas Importantes</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Item</th><th>Detalhe</th></tr></thead>
+        <tbody>
+          <tr><td>Resultado provisório</td><td>Exibido na tela ao final da prova</td></tr>
+          <tr><td>Resultado oficial</td><td>Disponível no ANBIMA Edu em até 5 dias úteis</td></tr>
+          <tr><td>Calculadora</td><td>Disponível no sistema da prova (não pode levar a própria)</td></tr>
+          <tr><td>Rascunho</td><td>Bloco de notas digital disponível na plataforma</td></tr>
+          <tr><td>Cancelamento</td><td>Livre até 3 dias úteis antes da prova, sem custo</td></tr>
+          <tr><td>Senha de acesso</td><td>Login do ANBIMA Edu · atenção: 3 tentativas erradas cancela a prova</td></tr>
+          <tr><td>Documento</td><td>Obrigatório com CPF · chegue 30 min antes</td></tr>
+          <tr><td>Aplicadoras</td><td>Cesgranrio e FGV</td></tr>
+          <tr><td>Atualização (a partir de 2027)</td><td>Microcertificações anuais + taxa R$115/ano</td></tr>
+          <tr><td>Reconhecimento internacional</td><td>Equivalência com certificação EIP (EFPA) da União Europeia</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== MÓDULOS ===================== -->
+<div id="modulos" class="screen">
+  <div class="section-label">2 · Módulos Oficiais da CPA 2026</div>
+
+  <div class="mod-grid" style="margin-bottom:28px;">
+    <div class="mod-card m1">
+      <div class="mod-num">1</div>
+      <div class="mod-title">Estrutura e dinâmica do Sistema Financeiro Nacional</div>
+      <div class="mod-sub">Órgãos reguladores, participantes do mercado, sistemas de liquidação e custódia, normas de distribuição</div>
+      <div class="mod-topics">🏛️ CMN · BACEN · CVM · SUSEP · ANBIMA · B3 · SELIC · CETIP/B3</div>
+    </div>
+    <div class="mod-card m2">
+      <div class="mod-num">2</div>
+      <div class="mod-title">Produtos do mercado financeiro</div>
+      <div class="mod-sub">Renda fixa, renda variável, fundos de investimento, previdência, câmbio e tributação</div>
+      <div class="mod-topics">💰 Tesouro Direto · CDB · LCI · LCA · Ações · FIIs · Fundos · PGBL · VGBL</div>
+    </div>
+    <div class="mod-card m3">
+      <div class="mod-num">3</div>
+      <div class="mod-title">Relacionamento com o cliente</div>
+      <div class="mod-sub">Prospecção, atendimento, suporte, suitability, ética, API, prevenção à lavagem de dinheiro</div>
+      <div class="mod-topics">🤝 API · KYC · Suitability · Ética · PLD · Código de Conduta · ASG</div>
+    </div>
+    <div class="mod-card m4">
+      <div class="mod-num">4</div>
+      <div class="mod-title">Inovação e desenvolvimento de mercado</div>
+      <div class="mod-sub">Novidades do mercado financeiro digital: criptoativos, tokenização, DeFi, fintechs, open finance</div>
+      <div class="mod-topics">🚀 Criptomoedas · DeFi · NFTs · Tokenização · Sandbox · Open Finance</div>
+    </div>
+  </div>
+
+  <!-- MÓDULO 1 DETALHADO -->
+  <div class="section mod1">
+    <div class="section-title"><span style="background:#1a3a5c;color:white;padding:3px 10px;border-radius:6px;font-size:13px">M1</span> Estrutura e Dinâmica do SFN</div>
+    <div class="section-sub">O que é, como funciona e quem regula o mercado financeiro brasileiro</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Subtema</th><th>O que memorizar</th><th>O que cai na prova</th><th>Armadilhas</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>CMN</strong></td>
+            <td>É o órgão normativo máximo. Não fiscaliza diretamente. Define diretrizes.</td>
+            <td>Quem faz o quê (CMN normatiza, BACEN executa, CVM fiscaliza valores mobiliários)</td>
+            <td>Confundir CMN com BACEN. CMN <strong>não</strong> executa política monetária — quem faz é o BACEN.</td>
+          </tr>
+          <tr>
+            <td><strong>BACEN</strong></td>
+            <td>Executor das políticas do CMN. Controla inflação, câmbio, emite moeda.</td>
+            <td>Funções do BACEN: autorizar funcionamento de bancos, definir Selic, regular câmbio</td>
+            <td>BACEN não regula fundos de investimento — isso é CVM.</td>
+          </tr>
+          <tr>
+            <td><strong>CVM</strong></td>
+            <td>Regula e fiscaliza mercado de capitais (ações, debêntures, fundos)</td>
+            <td>Função da CVM na proteção do investidor e nas ofertas públicas</td>
+            <td>CVM <strong>não</strong> regula seguros — isso é SUSEP.</td>
+          </tr>
+          <tr>
+            <td><strong>SUSEP</strong></td>
+            <td>Regula seguros, previdência privada aberta e capitalização</td>
+            <td>VGBL e PGBL são fiscalizados pela SUSEP (produtos de seguro/prev aberta)</td>
+            <td>PREVIC regula previdência fechada (EFPC). SUSEP é a aberta.</td>
+          </tr>
+          <tr>
+            <td><strong>ANBIMA</strong></td>
+            <td>Entidade autorreguladora — não é órgão governamental</td>
+            <td>Papel da ANBIMA: boas práticas, certificações, informação ao mercado</td>
+            <td>ANBIMA não tem poder de lei — suas normas são de adesão voluntária/contratual.</td>
+          </tr>
+          <tr>
+            <td><strong>B3 / SELIC / CETIP</strong></td>
+            <td>B3: bolsa de valores + custódia. SELIC: títulos públicos. CETIP (atual B3): privados.</td>
+            <td>Qual sistema custodia qual ativo (LFT/LTN no SELIC; CDB/debentures na B3)</td>
+            <td>CETIP foi incorporada pela B3 em 2017 — mas o nome ainda aparece nas provas.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="margin-top:16px;background:#e8f0fe;border-radius:8px;padding:14px 18px;font-size:13px;">
+      🏦 <strong>Aplicação no dia a dia como agente:</strong> Quando o cliente pergunta "quem garante meus investimentos?", você sabe responder: FGC cobre até R$250k por instituição (CDB, LCI, poupança), mas não cobre ações nem fundos. CVM e BACEN existem para regular e proteger — você representa o braço comercial nessa cadeia.
+    </div>
+  </div>
+
+  <!-- MÓDULO 2 DETALHADO -->
+  <div class="section mod2">
+    <div class="section-title"><span style="background:#0e7c7b;color:white;padding:3px 10px;border-radius:6px;font-size:13px">M2</span> Produtos do Mercado Financeiro</div>
+    <div class="section-sub">O coração da prova — dominar produtos é o que mais diferencia aprovados de reprovados</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Produto</th><th>Conceito-chave</th><th>Risco</th><th>Tributação</th><th>Pegadinha clássica</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Tesouro Direto</strong></td>
+            <td>Títulos públicos federais. Emissor: Tesouro Nacional. Custódia: SELIC.</td>
+            <td>Crédito do governo federal (menor risco BR). Risco de mercado se vender antes do vencimento.</td>
+            <td>IR tabela regressiva (22,5% → 15%). IOF até 30 dias.</td>
+            <td>LFT = Tesouro Selic. LTN = Tesouro Prefixado. NTN-B = Tesouro IPCA+. Não confundir taxa SELIC com título Tesouro Selic.</td>
+          </tr>
+          <tr>
+            <td><strong>CDB</strong></td>
+            <td>Título privado. Emitido por banco. Cobre FGC até R$250k.</td>
+            <td>Risco de crédito do banco emissor.</td>
+            <td>IR tabela regressiva. IOF até 30 dias. Fonte pagadora: o banco.</td>
+            <td>Mesmo banco que emite o CDB pode quebrar — FGC cobre até o limite.</td>
+          </tr>
+          <tr>
+            <td><strong>LCI / LCA</strong></td>
+            <td>LCI = crédito imobiliário. LCA = agronegócio. Emitidos por banco.</td>
+            <td>Risco de crédito. FGC cobre.</td>
+            <td><strong>Isento de IR para Pessoa Física.</strong> Grande diferencial.</td>
+            <td>PJ paga IR em LCI/LCA. Isento apenas para PF.</td>
+          </tr>
+          <tr>
+            <td><strong>Debêntures</strong></td>
+            <td>Dívida corporativa. Empresas captam dinheiro no mercado. Não tem FGC.</td>
+            <td>Risco de crédito da empresa. Sem garantia.</td>
+            <td>IR tabela regressiva (exceto debentures incentivadas — isentas PF).</td>
+            <td>Debentures incentivadas (infraestrutura) = isentas IR para PF.</td>
+          </tr>
+          <tr>
+            <td><strong>Ações</strong></td>
+            <td>Participação no capital de empresa. Renda variável.</td>
+            <td>Risco de mercado, risco de empresa, liquidez.</td>
+            <td>Ganho de capital: 15% acima de R$20k/mês. Day trade: 20%.</td>
+            <td>Venda até R$20k/mês em ações é isenta de IR para PF.</td>
+          </tr>
+          <tr>
+            <td><strong>Fundos de Investimento</strong></td>
+            <td>Condomínio de investidores. Gestor toma as decisões. Cotistas.</td>
+            <td>Depende da categoria (RF, RV, Multimercado, Cambial).</td>
+            <td>Come-cotas (RF e Multimercado): maio e novembro. Ações: apenas no resgate.</td>
+            <td>Come-cotas não existe em fundos de ações. Administrador ≠ Gestor.</td>
+          </tr>
+          <tr>
+            <td><strong>PGBL vs VGBL</strong></td>
+            <td>PGBL: deduz na base do IR (até 12% da renda bruta). VGBL: não deduz.</td>
+            <td>Risco do fundo que compõe o plano. SUSEP regula.</td>
+            <td>PGBL: IR incide sobre total resgatado. VGBL: IR só sobre o rendimento.</td>
+            <td>PGBL só vale para quem faz declaração completa. VGBL para quem faz simplificada.</td>
+          </tr>
+          <tr>
+            <td><strong>COE</strong></td>
+            <td>Certificado de Operações Estruturadas. Combina renda fixa + derivativos.</td>
+            <td>Risco de crédito do banco. Pode ter capital não protegido.</td>
+            <td>IR tabela regressiva.</td>
+            <td>COE de capital protegido ≠ garantia do FGC. São coisas distintas.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="margin-top:16px;background:#e8f9ee;border-radius:8px;padding:14px 18px;font-size:13px;">
+      💡 <strong>Analogia que funciona:</strong> Renda fixa = contrato de aluguel (você sabe quanto vai receber). Renda variável = dono de negócio (pode ganhar muito ou perder). Fundos = condomínio (você contrata um síndico — o gestor — para cuidar do seu dinheiro junto com outros vizinhos).
+    </div>
+  </div>
+
+  <!-- MÓDULO 3 DETALHADO -->
+  <div class="section mod3">
+    <div class="section-title"><span style="background:#8e44ad;color:white;padding:3px 10px;border-radius:6px;font-size:13px">M3</span> Relacionamento com o Cliente</div>
+    <div class="section-sub">O módulo mais cobrado nas questões de árvore de diálogo — conecte regulação com prática</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Tema</th><th>Conceito-chave</th><th>O que cai na prova</th><th>Armadilha</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>API — Análise do Perfil do Investidor</strong></td>
+            <td>Suitability. Antes de qualquer recomendação, avaliar: objetivo, horizonte, risco tolerado.</td>
+            <td>Quais perguntas fazer, como classificar o perfil (conservador/moderado/arrojado), quando refazer</td>
+            <td>Oferecer produto acima do perfil = infração ética. Mesmo que o cliente queira.</td>
+          </tr>
+          <tr>
+            <td><strong>KYC — Know Your Customer</strong></td>
+            <td>Conheça seu cliente. Identificação, qualificação, atualização cadastral.</td>
+            <td>Documentos necessários, prazo de atualização, o que fazer se cliente recusar</td>
+            <td>KYC é obrigação legal — não é opcional nem pode ser dispensado.</td>
+          </tr>
+          <tr>
+            <td><strong>PLD-FT (Lavagem de Dinheiro)</strong></td>
+            <td>Prevenção à lavagem de dinheiro e financiamento ao terrorismo.</td>
+            <td>As 3 etapas: colocação → ocultação → integração. Operações suspeitas = comunicar ao COAF.</td>
+            <td>Comunicação ao COAF é sigilosa. Não deve informar o cliente que está sendo reportado.</td>
+          </tr>
+          <tr>
+            <td><strong>Código de Conduta Ética ANBIMA</strong></td>
+            <td>Princípios: integridade, transparência, diligência, confidencialidade, não conflito de interesses.</td>
+            <td>Situações práticas: o que fazer quando há conflito de interesse, o que é informação privilegiada</td>
+            <td>Questões interpretativas — decorar não adianta. Entender a lógica ética.</td>
+          </tr>
+          <tr>
+            <td><strong>ASG / ESG</strong></td>
+            <td>Ambiental, Social e Governança. Critérios para análise de sustentabilidade de investimentos.</td>
+            <td>O que são critérios ASG e por que importam para o investidor e para o mercado</td>
+            <td>ASG não é garantia de retorno maior — é critério de qualidade e risco não financeiro.</td>
+          </tr>
+          <tr>
+            <td><strong>Perfis de investidor</strong></td>
+            <td>Conservador: preservar capital. Moderado: equilíbrio risco/retorno. Arrojado: maior risco por maior retorno.</td>
+            <td>Qual produto indicar para cada perfil. Cases com clientes reais.</td>
+            <td>Perfil não é eterno — deve ser revisto a cada 24 meses ou quando houver mudança de vida.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- MÓDULO 4 DETALHADO -->
+  <div class="section mod4">
+    <div class="section-title"><span style="background:#c0392b;color:white;padding:3px 10px;border-radius:6px;font-size:13px">M4</span> Inovação e Desenvolvimento de Mercado</div>
+    <div class="section-sub">Novo módulo da CPA 2026 — foco em conceitos, não em profundidade técnica</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Tema</th><th>Conceito-chave</th><th>O que cai na prova</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Criptomoedas</strong></td>
+            <td>Moedas digitais descentralizadas baseadas em blockchain. Bitcoin é a mais famosa.</td>
+            <td>Definição, característica de descentralização, risco de volatilidade, não tem FGC</td>
+          </tr>
+          <tr>
+            <td><strong>DeFi (Finanças Descentralizadas)</strong></td>
+            <td>Serviços financeiros sem intermediários, operados por contratos inteligentes em blockchain.</td>
+            <td>Conceito de descentralização, diferença de sistema financeiro tradicional</td>
+          </tr>
+          <tr>
+            <td><strong>Tokenização</strong></td>
+            <td>Representação digital de ativos reais (imóveis, commodities, recebíveis) em blockchain.</td>
+            <td>O que é, benefícios (fracionamento, liquidez) e riscos</td>
+          </tr>
+          <tr>
+            <td><strong>NFTs</strong></td>
+            <td>Tokens Não Fungíveis — representação única de um ativo digital. Não são divisíveis.</td>
+            <td>Definição e diferença de criptomoedas fungíveis como Bitcoin</td>
+          </tr>
+          <tr>
+            <td><strong>Open Finance</strong></td>
+            <td>Compartilhamento de dados financeiros do cliente entre instituições, com consentimento.</td>
+            <td>O que é, quem regulamenta (BACEN), benefícios para o cliente</td>
+          </tr>
+          <tr>
+            <td><strong>Sandbox Regulatório</strong></td>
+            <td>Ambiente experimental onde fintechs podem testar produtos com regulação flexibilizada temporariamente.</td>
+            <td>Conceito e objetivo: estimular inovação com segurança regulatória</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="margin-top:16px;background:#fde8e8;border-radius:8px;padding:14px 18px;font-size:13px;">
+      ⚠️ <strong>Peso na prova:</strong> Este módulo é novo e cobrado de forma conceitual. Não aprofunde — entenda os conceitos básicos e diferencie cada um. Provavelmente cai 1 a 3 questões.
+    </div>
+  </div>
+</div>
+
+<!-- ===================== ROADMAP ===================== -->
+<div id="roadmap" class="screen">
+  <div class="section-label">3 · Roadmap Completo</div>
+
+  <div class="section">
+    <div class="section-title">🗺️ Visão Macro — 12 Semanas até a Aprovação</div>
+    <div class="section-sub">Duração sugerida com dedicação de 1h a 1h30 por dia</div>
+
+    <div class="tbl-wrap" style="margin-bottom:24px;">
+      <table>
+        <thead><tr><th>Fase</th><th>Semanas</th><th>Foco</th><th>Meta semanal</th><th>Indicador de progresso</th></tr></thead>
+        <tbody>
+          <tr><td><span class="pill blue">Fundamentos</span></td><td>S1 – S4</td><td>Módulos 1 e 2 (SFN + Produtos)</td><td>2 subtemas/semana + 20 questões</td><td>Acertar 60% das questões do módulo</td></tr>
+          <tr><td><span class="pill purple">Aplicação prática</span></td><td>S5 – S8</td><td>Módulos 3 e 4 (Relacionamento + Inovação)</td><td>1h teoria + 1 simulação de atendimento</td><td>Completar 3 árvores de diálogo por semana</td></tr>
+          <tr><td><span class="pill orange">Revisão ativa</span></td><td>S9 – S10</td><td>Todos os módulos · Pontos fracos</td><td>Revisão espaçada D1-D3-D7-D14</td><td>Acertar 75%+ em simulados por módulo</td></tr>
+          <tr><td><span class="pill red">Simulados</span></td><td>S11 – S12</td><td>Provas completas · Análise de erros</td><td>2 simulados completos (50 questões)</td><td>Aprovação ≥ 80% nos simulados (acima da barra)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="roadmap">
+      <div class="road-item active">
+        <div class="road-phase">Fase 1 · Semanas 1-4</div>
+        <div class="road-title">🏗️ Construção dos Fundamentos</div>
+        <div class="road-desc">S1: SFN — órgãos, reguladores, estrutura. S2: Renda Fixa — Tesouro, CDB, LCI, LCA, Debêntures. S3: Renda Variável + Fundos. S4: Previdência, COE, tributação.</div>
+      </div>
+      <div class="road-item">
+        <div class="road-phase">Fase 2 · Semanas 5-8</div>
+        <div class="road-title">🤝 Aplicação Prática com Clientes</div>
+        <div class="road-desc">S5: API, Suitability, KYC. S6: Ética, PLD, Código de Conduta. S7: Inovação — cripto, DeFi, tokenização. S8: Simulações de atendimento + árvores de diálogo.</div>
+      </div>
+      <div class="road-item">
+        <div class="road-phase">Fase 3 · Semanas 9-10</div>
+        <div class="road-title">🔄 Revisão Ativa e Correção</div>
+        <div class="road-desc">Revisar todos os módulos. Criar flashcards para pontos fracos. Refazer questões erradas. Técnica Feynman: explicar cada tema em voz alta como se fosse para um leigo.</div>
+      </div>
+      <div class="road-item">
+        <div class="road-phase">Fase 4 · Semanas 11-12</div>
+        <div class="road-title">🎯 Intensivo de Simulados</div>
+        <div class="road-desc">2 simulados completos por semana. Analisar erros com foco em padrões. Revisar legislação e tributação (maiores fontes de erro). Simular condição real (2h30, sem pausas).</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== PLANO SEMANAL ===================== -->
+<div id="plano-semanal" class="screen">
+  <div class="section-label">4 · Plano Semanal Detalhado</div>
+  <div class="week-grid">
+
+    <!-- SEMANA 1 -->
+    <div class="week-card">
+      <div class="week-header w1">📋 Semana 1 <span style="font-weight:400;opacity:0.8">SFN e Reguladores</span></div>
+      <div class="week-body">
+        <div class="week-row"><div class="week-icon book">📖</div><div><strong>Tema:</strong> CMN, BACEN, CVM, SUSEP, ANBIMA, B3, SELIC</div></div>
+        <div class="week-row"><div class="week-icon target">🎯</div><div><strong>Objetivo:</strong> Saber o papel de cada órgão, quem regula o quê e qual é eletivo vs obrigatório</div></div>
+        <div class="week-row"><div class="week-icon tool">🛠️</div><div><strong>Atividade:</strong> Montar tabela "Quem cuida de quê" e explicar para si mesmo sem olhar as notas</div></div>
+        <div class="week-row"><div class="week-icon quiz">❓</div><div><strong>Output:</strong> Responder 15 questões sobre órgãos e acertar 10+</div></div>
+      </div>
+    </div>
+
+    <!-- SEMANA 2 -->
+    <div class="week-card">
+      <div class="week-header w2">💰 Semana 2 <span style="font-weight:400;opacity:0.8">Renda Fixa</span></div>
+      <div class="week-body">
+        <div class="week-row"><div class="week-icon book">📖</div><div><strong>Tema:</strong> Tesouro Direto, CDB, LCI, LCA, Debêntures, FGC, tributação</div></div>
+        <div class="week-row"><div class="week-icon target">🎯</div><div><strong>Objetivo:</strong> Saber indicar o produto certo para perfil conservador, explicar diferença de rentabilidade e risco</div></div>
+        <div class="week-row"><div class="week-icon tool">🛠️</div><div><strong>Atividade:</strong> Simular atendimento: cliente conservador com R$50k, prazo 2 anos — o que indicar e por quê?</div></div>
+        <div class="week-row"><div class="week-icon quiz">❓</div><div><strong>Output:</strong> Montar comparativo de produtos + resolver 20 questões de renda fixa</div></div>
+      </div>
+    </div>
+
+    <!-- SEMANA 3 -->
+    <div class="week-card">
+      <div class="week-header w3">📈 Semana 3 <span style="font-weight:400;opacity:0.8">Renda Variável e Fundos</span></div>
+      <div class="week-body">
+        <div class="week-row"><div class="week-icon book">📖</div><div><strong>Tema:</strong> Ações, FIIs, ETFs, Fundos (RF, RV, Multimercado, Cambial)</div></div>
+        <div class="week-row"><div class="week-icon target">🎯</div><div><strong>Objetivo:</strong> Explicar come-cotas, tipos de fundo, quem é gestor/administrador/cotista</div></div>
+        <div class="week-row"><div class="week-icon tool">🛠️</div><div><strong>Atividade:</strong> Simular: cliente arrojado, horizonte 10 anos, quer diversificação — proposta de alocação</div></div>
+        <div class="week-row"><div class="week-icon quiz">❓</div><div><strong>Output:</strong> Flashcards de fundos (tipos, tributação) + 20 questões resolvidas</div></div>
+      </div>
+    </div>
+
+    <!-- SEMANA 4 -->
+    <div class="week-card">
+      <div class="week-header w4">🔒 Semana 4 <span style="font-weight:400;opacity:0.8">Previdência, COE e Tributação</span></div>
+      <div class="week-body">
+        <div class="week-row"><div class="week-icon book">📖</div><div><strong>Tema:</strong> PGBL vs VGBL, COE, tributação geral, tabela regressiva/progressiva</div></div>
+        <div class="week-row"><div class="week-icon target">🎯</div><div><strong>Objetivo:</strong> Saber quando indicar PGBL vs VGBL, o que é come-cotas, como funciona tabela regressiva</div></div>
+        <div class="week-row"><div class="week-icon tool">🛠️</div><div><strong>Atividade:</strong> Cliente: 40 anos, declara IR completo, quer poupar para aposentadoria — PGBL ou VGBL?</div></div>
+        <div class="week-row"><div class="week-icon quiz">❓</div><div><strong>Output:</strong> Resolver 20 questões de tributação e previdência</div></div>
+      </div>
+    </div>
+
+    <!-- SEMANA 5 -->
+    <div class="week-card">
+      <div class="week-header w5">🤝 Semana 5 <span style="font-weight:400;opacity:0.8">API e Suitability</span></div>
+      <div class="week-body">
+        <div class="week-row"><div class="week-icon book">📖</div><div><strong>Tema:</strong> Análise do Perfil do Investidor, KYC, tipos de perfil, quando atualizar</div></div>
+        <div class="week-row"><div class="week-icon target">🎯</div><div><strong>Objetivo:</strong> Conduzir API de forma adequada, classificar perfil e fazer recomendação aderente</div></div>
+        <div class="week-row"><div class="week-icon tool">🛠️</div><div><strong>Atividade:</strong> Praticar 5 árvores de diálogo de atendimento com diferentes perfis de clientes</div></div>
+        <div class="week-row"><div class="week-icon quiz">❓</div><div><strong>Output:</strong> Script de atendimento completo do início ao fim com cliente novo</div></div>
+      </div>
+    </div>
+
+    <!-- SEMANA 6 -->
+    <div class="week-card">
+      <div class="week-header w6">⚖️ Semana 6 <span style="font-weight:400;opacity:0.8">Ética e PLD</span></div>
+      <div class="week-body">
+        <div class="week-row"><div class="week-icon book">📖</div><div><strong>Tema:</strong> Código de Conduta Ética ANBIMA, PLD-FT, ASG, conflito de interesses</div></div>
+        <div class="week-row"><div class="week-icon target">🎯</div><div><strong>Objetivo:</strong> Identificar situações de conflito ético e saber a conduta correta</div></div>
+        <div class="week-row"><div class="week-icon tool">🛠️</div><div><strong>Atividade:</strong> Ler o Código de Conduta ANBIMA e resolver 10 casos práticos de ética</div></div>
+        <div class="week-row"><div class="week-icon quiz">❓</div><div><strong>Output:</strong> Lista dos 5 princípios éticos principais e como se aplicam no dia a dia</div></div>
+      </div>
+    </div>
+
+    <!-- SEMANA 7 -->
+    <div class="week-card">
+      <div class="week-header w7">🚀 Semana 7 <span style="font-weight:400;opacity:0.8">Inovação (M4)</span></div>
+      <div class="week-body">
+        <div class="week-row"><div class="week-icon book">📖</div><div><strong>Tema:</strong> Criptomoedas, DeFi, Tokenização, NFTs, Open Finance, Sandbox</div></div>
+        <div class="week-row"><div class="week-icon target">🎯</div><div><strong>Objetivo:</strong> Explicar cada conceito de forma simples para um cliente leigo</div></div>
+        <div class="week-row"><div class="week-icon tool">🛠️</div><div><strong>Atividade:</strong> Criar "glossário de inovação" em 1 página + 10 questões conceituais</div></div>
+        <div class="week-row"><div class="week-icon quiz">❓</div><div><strong>Output:</strong> Explicar Bitcoin e Open Finance sem usar jargão técnico</div></div>
+      </div>
+    </div>
+
+    <!-- SEMANA 8 -->
+    <div class="week-card">
+      <div class="week-header w8">🎭 Semana 8 <span style="font-weight:400;opacity:0.8">Simulações de Atendimento</span></div>
+      <div class="week-body">
+        <div class="week-row"><div class="week-icon book">📖</div><div><strong>Tema:</strong> Revisão do módulo 3 com foco em árvore de diálogo</div></div>
+        <div class="week-row"><div class="week-icon target">🎯</div><div><strong>Objetivo:</strong> Dominar o formato árvore de diálogo — 10 questões na prova!</div></div>
+        <div class="week-row"><div class="week-icon tool">🛠️</div><div><strong>Atividade:</strong> 3 simulações completas de atendimento: conservador, moderado, arrojado</div></div>
+        <div class="week-row"><div class="week-icon quiz">❓</div><div><strong>Output:</strong> Acertar 8/10 nas questões de árvore de diálogo</div></div>
+      </div>
+    </div>
+
+    <!-- SEMANA 9 -->
+    <div class="week-card">
+      <div class="week-header w9">🔄 Semana 9 <span style="font-weight:400;opacity:0.8">Revisão Módulos 1 e 2</span></div>
+      <div class="week-body">
+        <div class="week-row"><div class="week-icon book">📖</div><div><strong>Tema:</strong> Revisão ativa SFN + todos os produtos</div></div>
+        <div class="week-row"><div class="week-icon target">🎯</div><div><strong>Objetivo:</strong> Consolidar pontos fracos identificados nas semanas anteriores</div></div>
+        <div class="week-row"><div class="week-icon tool">🛠️</div><div><strong>Atividade:</strong> Técnica Feynman: explique cada módulo em 2 minutos sem consultar material</div></div>
+        <div class="week-row"><div class="week-icon quiz">❓</div><div><strong>Output:</strong> Simulado de 25 questões (M1+M2) com 75%+ de acerto</div></div>
+      </div>
+    </div>
+
+    <!-- SEMANA 10 -->
+    <div class="week-card">
+      <div class="week-header w10">🔁 Semana 10 <span style="font-weight:400;opacity:0.8">Revisão Módulos 3 e 4</span></div>
+      <div class="week-body">
+        <div class="week-row"><div class="week-icon book">📖</div><div><strong>Tema:</strong> Revisão ativa Relacionamento + Inovação</div></div>
+        <div class="week-row"><div class="week-icon target">🎯</div><div><strong>Objetivo:</strong> Dominar ética, API, árvore de diálogo e inovações</div></div>
+        <div class="week-row"><div class="week-icon tool">🛠️</div><div><strong>Atividade:</strong> Refazer questões erradas de árvore de diálogo com análise do porquê errou</div></div>
+        <div class="week-row"><div class="week-icon quiz">❓</div><div><strong>Output:</strong> Base de erros organizada por tema</div></div>
+      </div>
+    </div>
+
+    <!-- SEMANA 11 -->
+    <div class="week-card">
+      <div class="week-header w11">🏋️ Semana 11 <span style="font-weight:400;opacity:0.8">Simulados Completos</span></div>
+      <div class="week-body">
+        <div class="week-row"><div class="week-icon book">📖</div><div><strong>Tema:</strong> Simulado 1 (50 questões) + análise de erros</div></div>
+        <div class="week-row"><div class="week-icon target">🎯</div><div><strong>Objetivo:</strong> Replicar condições reais da prova — 2h30 sem pausa, calculadora permitida</div></div>
+        <div class="week-row"><div class="week-icon tool">🛠️</div><div><strong>Atividade:</strong> Simular 2x nessa semana. Após cada simulado: catalogar erros por módulo</div></div>
+        <div class="week-row"><div class="week-icon quiz">❓</div><div><strong>Output:</strong> Acertar 38+ (76%+) no simulado</div></div>
+      </div>
+    </div>
+
+    <!-- SEMANA 12 -->
+    <div class="week-card">
+      <div class="week-header w12">🎯 Semana 12 <span style="font-weight:400;opacity:0.8">Reta Final</span></div>
+      <div class="week-body">
+        <div class="week-row"><div class="week-icon book">📖</div><div><strong>Tema:</strong> Pontos críticos + revisão de tributação + simulado final</div></div>
+        <div class="week-row"><div class="week-icon target">🎯</div><div><strong>Objetivo:</strong> Chegar na prova com confiança e estratégia de resposta</div></div>
+        <div class="week-row"><div class="week-icon tool">🛠️</div><div><strong>Atividade:</strong> Simulado final + revisão dos 20 flashcards mais difíceis + descanso 2 dias antes da prova</div></div>
+        <div class="week-row"><div class="week-icon quiz">❓</div><div><strong>Output:</strong> Acertar 40+ (80%) no simulado final</div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===================== FLASHCARDS ===================== -->
+<div id="flashcards" class="screen">
+  <div class="section-label">5 · Flashcards Interativos</div>
+  <p style="color:var(--muted);font-size:13px;margin-bottom:20px;">Passe o mouse (ou toque) para revelar a resposta · Clique para fixar virado</p>
+  <div class="flashcard-grid">
+    <div class="flashcard" onclick="this.classList.toggle('flipped')">
+      <div class="flashcard-inner">
+        <div class="fc-front"><div class="fc-label">M1 · SFN</div><div class="fc-q">Quem regula os fundos de investimento no Brasil?</div><div class="fc-hint">hover para ver resposta →</div></div>
+        <div class="fc-back"><div class="fc-label">Resposta</div><div class="fc-q">A CVM (Comissão de Valores Mobiliários). Não é o BACEN.</div></div>
+      </div>
+    </div>
+    <div class="flashcard" onclick="this.classList.toggle('flipped')">
+      <div class="flashcard-inner">
+        <div class="fc-front"><div class="fc-label">M2 · Renda Fixa</div><div class="fc-q">LCI e LCA têm IR para pessoa física?</div></div>
+        <div class="fc-back"><div class="fc-label">Resposta</div><div class="fc-q">Não. São isentos de IR para PF. Para PJ há incidência normal de IR.</div></div>
+      </div>
+    </div>
+    <div class="flashcard" onclick="this.classList.toggle('flipped')">
+      <div class="flashcard-inner">
+        <div class="fc-front"><div class="fc-label">M2 · Previdência</div><div class="fc-q">Qual a diferença entre PGBL e VGBL na declaração do IR?</div></div>
+        <div class="fc-back"><div class="fc-label">Resposta</div><div class="fc-q">PGBL: deduz até 12% da renda bruta (declara completo). VGBL: sem dedução (mais vantajoso para declaração simplificada).</div></div>
+      </div>
+    </div>
+    <div class="flashcard" onclick="this.classList.toggle('flipped')">
+      <div class="flashcard-inner">
+        <div class="fc-front"><div class="fc-label">M2 · Fundos</div><div class="fc-q">O que é come-cotas e quando acontece?</div></div>
+        <div class="fc-back"><div class="fc-label">Resposta</div><div class="fc-q">Antecipação de IR em fundos RF e Multimercado. Ocorre em maio e novembro. Não existe em fundos de ações.</div></div>
+      </div>
+    </div>
+    <div class="flashcard" onclick="this.classList.toggle('flipped')">
+      <div class="flashcard-inner">
+        <div class="fc-front"><div class="fc-label">M3 · Ética</div><div class="fc-q">O que é suitability e quando deve ser feito?</div></div>
+        <div class="fc-back"><div class="fc-label">Resposta</div><div class="fc-q">Análise do Perfil do Investidor (API). Deve ser feita antes de qualquer recomendação de produto e atualizada a cada 24 meses.</div></div>
+      </div>
+    </div>
+    <div class="flashcard" onclick="this.classList.toggle('flipped')">
+      <div class="flashcard-inner">
+        <div class="fc-front"><div class="fc-label">M3 · PLD</div><div class="fc-q">Quais são as 3 etapas da lavagem de dinheiro?</div></div>
+        <div class="fc-back"><div class="fc-label">Resposta</div><div class="fc-q">1. Colocação (inserir dinheiro no sistema) → 2. Ocultação (disfarçar a origem) → 3. Integração (reintegrar como dinheiro "limpo").</div></div>
+      </div>
+    </div>
+    <div class="flashcard" onclick="this.classList.toggle('flipped')">
+      <div class="flashcard-inner">
+        <div class="fc-front"><div class="fc-label">M1 · FGC</div><div class="fc-q">O FGC cobre fundos de investimento?</div></div>
+        <div class="fc-back"><div class="fc-label">Resposta</div><div class="fc-q">Não. FGC cobre CDB, LCI, LCA, poupança e outros títulos bancários. Limite: R$250k por CPF por instituição.</div></div>
+      </div>
+    </div>
+    <div class="flashcard" onclick="this.classList.toggle('flipped')">
+      <div class="flashcard-inner">
+        <div class="fc-front"><div class="fc-label">M4 · Inovação</div><div class="fc-q">O que é DeFi?</div></div>
+        <div class="fc-back"><div class="fc-label">Resposta</div><div class="fc-q">Finanças Descentralizadas. Serviços financeiros operados por contratos inteligentes em blockchain, sem intermediários tradicionais.</div></div>
+      </div>
+    </div>
+    <div class="flashcard" onclick="this.classList.toggle('flipped')">
+      <div class="flashcard-inner">
+        <div class="fc-front"><div class="fc-label">M2 · Ações</div><div class="fc-q">Qual o IR sobre ganho de capital em ações para PF?</div></div>
+        <div class="fc-back"><div class="fc-label">Resposta</div><div class="fc-q">15% sobre o ganho. Isento se vendas no mês forem até R$20.000. Day trade: 20% (sempre tributado).</div></div>
+      </div>
+    </div>
+    <div class="flashcard" onclick="this.classList.toggle('flipped')">
+      <div class="flashcard-inner">
+        <div class="fc-front"><div class="fc-label">M1 · Regulação</div><div class="fc-q">Qual é o papel do CMN?</div></div>
+        <div class="fc-back"><div class="fc-label">Resposta</div><div class="fc-q">Órgão normativo máximo do SFN. Define diretrizes da política monetária, cambial e de crédito. Não executa — quem executa é o BACEN.</div></div>
+      </div>
+    </div>
+    <div class="flashcard" onclick="this.classList.toggle('flipped')">
+      <div class="flashcard-inner">
+        <div class="fc-front"><div class="fc-label">M3 · API</div><div class="fc-q">Pode oferecer produto acima do perfil do investidor se ele pedir?</div></div>
+        <div class="fc-back"><div class="fc-label">Resposta</div><div class="fc-q">Não. Oferecer produto inadequado ao perfil é infração regulatória, mesmo que o cliente solicite. A recomendação deve ser sempre aderente ao perfil.</div></div>
+      </div>
+    </div>
+    <div class="flashcard" onclick="this.classList.toggle('flipped')">
+      <div class="flashcard-inner">
+        <div class="fc-front"><div class="fc-label">M4 · Tokenização</div><div class="fc-q">O que é tokenização de ativos?</div></div>
+        <div class="fc-back"><div class="fc-label">Resposta</div><div class="fc-q">Representação digital de ativos reais (imóveis, recebíveis, commodities) em blockchain, permitindo fracionamento e maior liquidez.</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÕES ===================== -->
+<div id="questoes" class="screen">
+  <div class="section-label">6 · Questões Simuladas — Estilo Prova</div>
+  <p style="color:var(--muted);font-size:13px;margin-bottom:20px;">Clique em "Ver gabarito" após responder para ver o comentário</p>
+
+  <!-- Q1 -->
+  <div class="questao">
+    <div class="q-header"><span>Questão 1 · M1 · Nível Fácil</span><span class="pill blue">Múltipla escolha</span></div>
+    <div class="q-body">
+      <div class="q-enunciado">Um cliente chega à sua agência e pergunta: "Quem fiscaliza os fundos de investimento que eu aplicou?" Você deve responder corretamente que é:</div>
+      <div class="q-alternativa" onclick="resp(this,'errada')"><div class="letra">A</div> O Banco Central do Brasil (BACEN)</div>
+      <div class="q-alternativa" onclick="resp(this,'correta')"><div class="letra">B</div> A Comissão de Valores Mobiliários (CVM)</div>
+      <div class="q-alternativa" onclick="resp(this,'errada')"><div class="letra">C</div> O Conselho Monetário Nacional (CMN)</div>
+      <div class="q-alternativa" onclick="resp(this,'errada')"><div class="letra">D</div> A Superintendência de Seguros Privados (SUSEP)</div>
+      <button class="btn-ver" onclick="showGab(this)">Ver gabarito</button>
+      <div class="q-gabarito">✅ <strong>Resposta: B — CVM.</strong> A Comissão de Valores Mobiliários regula e fiscaliza o mercado de capitais, incluindo fundos de investimento. O BACEN cuida de bancos e política monetária. A SUSEP cuida de seguros e previdência privada aberta.</div>
+    </div>
+  </div>
+
+  <!-- Q2 - Árvore de diálogo -->
+  <div class="questao">
+    <div class="q-header"><span>Questão 2 · M3 · Nível Médio</span><span class="pill purple">Árvore de Diálogo</span></div>
+    <div class="q-body">
+      <div class="q-enunciado">Um cliente novo chega ao banco e diz: "Quero aplicar R$ 30.000,00 em algo rentável." Qual deve ser o seu primeiro passo?</div>
+      <div class="q-alternativa" onclick="resp(this,'errada')"><div class="letra">A</div> Oferecer imediatamente o CDB de maior rentabilidade da mesa</div>
+      <div class="q-alternativa" onclick="resp(this,'errada')"><div class="letra">B</div> Explicar as vantagens do Tesouro Direto para investimentos de longo prazo</div>
+      <div class="q-alternativa" onclick="resp(this,'correta')"><div class="letra">C</div> Realizar a Análise do Perfil do Investidor (API) para entender objetivos, prazo e tolerância a risco</div>
+      <div class="q-alternativa" onclick="resp(this,'errada')"><div class="letra">D</div> Perguntar se ele já investe em alguma outra instituição para avaliar a concorrência</div>
+      <button class="btn-ver" onclick="showGab(this)">Ver gabarito</button>
+      <div class="q-gabarito">✅ <strong>Resposta: C — Análise do Perfil do Investidor.</strong> Antes de qualquer recomendação, é obrigatório realizar o suitability (API). Indicar produto sem conhecer o perfil é irregularidade regulatória, independentemente da rentabilidade do produto.</div>
+    </div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="questao">
+    <div class="q-header"><span>Questão 3 · M2 · Nível Médio</span><span class="pill blue">Múltipla escolha</span></div>
+    <div class="q-body">
+      <div class="q-enunciado">Uma cliente, 35 anos, declarante do IR pela forma completa, deseja aplicar para a aposentadoria. Ela tem capacidade de deduzir contribuições da base de cálculo do IR. Qual produto de previdência é mais adequado para ela?</div>
+      <div class="q-alternativa" onclick="resp(this,'correta')"><div class="letra">A</div> PGBL, pois permite deduzir até 12% da renda bruta anual na declaração completa</div>
+      <div class="q-alternativa" onclick="resp(this,'errada')"><div class="letra">B</div> VGBL, pois o IR incide apenas sobre o rendimento no resgate</div>
+      <div class="q-alternativa" onclick="resp(this,'errada')"><div class="letra">C</div> Qualquer um, pois os dois têm o mesmo benefício fiscal</div>
+      <div class="q-alternativa" onclick="resp(this,'errada')"><div class="letra">D</div> VGBL, pois é regulado pela CVM com maior segurança</div>
+      <button class="btn-ver" onclick="showGab(this)">Ver gabarito</button>
+      <div class="q-gabarito">✅ <strong>Resposta: A — PGBL.</strong> Para quem declara na forma completa, o PGBL permite deduzir as contribuições da base de cálculo do IR (até 12% da renda bruta). O VGBL é indicado para quem faz declaração simplificada. Ambos são regulados pela SUSEP, não pela CVM.</div>
+    </div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="questao">
+    <div class="q-header"><span>Questão 4 · M3 · Nível Difícil</span><span class="pill purple">Árvore de Diálogo</span></div>
+    <div class="q-body">
+      <div class="q-enunciado">Durante o atendimento, você percebe que um cliente realizou movimentações atípicas: depósitos em dinheiro vivo repetidos logo abaixo do limite de notificação, provenientes de atividades que ele descreve de forma vaga. De acordo com as normas de PLD-FT, você deve:</div>
+      <div class="q-alternativa" onclick="resp(this,'errada')"><div class="letra">A</div> Perguntar diretamente ao cliente sobre a origem do dinheiro antes de agir</div>
+      <div class="q-alternativa" onclick="resp(this,'errada')"><div class="letra">B</div> Informar ao cliente que as operações serão comunicadas ao COAF para que ele decida se deseja continuar</div>
+      <div class="q-alternativa" onclick="resp(this,'correta')"><div class="letra">C</div> Comunicar as operações suspeitas ao COAF de forma sigilosa, sem informar o cliente sobre a comunicação</div>
+      <div class="q-alternativa" onclick="resp(this,'errada')"><div class="letra">D</div> Encerrar a conta do cliente imediatamente para evitar responsabilidade da instituição</div>
+      <button class="btn-ver" onclick="showGab(this)">Ver gabarito</button>
+      <div class="q-gabarito">✅ <strong>Resposta: C.</strong> A comunicação ao COAF é obrigatória e sigilosa. O profissional não pode alertar o cliente sobre a suspeita nem sobre a comunicação — isso comprometeria a investigação. Encerrar a conta sem comunicar não cumpre a obrigação legal.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== ROTINA ===================== -->
+<div id="rotina" class="screen">
+  <div class="section-label">7 · Rotina Semanal Integrada ao Trabalho</div>
+
+  <div class="section">
+    <div class="section-title">📅 Rotina Recomendada — 1h a 1h30 por dia</div>
+    <div class="rotina-grid">
+      <div class="dia-card">
+        <div class="dia-header">SEG</div>
+        <div class="dia-body">
+          <div class="dia-slot teoria">📖 45min Teoria</div>
+          <div class="dia-slot pratica">🛠️ 15min Prática</div>
+        </div>
+      </div>
+      <div class="dia-card">
+        <div class="dia-header">TER</div>
+        <div class="dia-body">
+          <div class="dia-slot revisao">🔄 30min Revisão</div>
+          <div class="dia-slot quiz">❓ 15min Questões</div>
+        </div>
+      </div>
+      <div class="dia-card">
+        <div class="dia-header">QUA</div>
+        <div class="dia-body">
+          <div class="dia-slot teoria">📖 45min Teoria</div>
+          <div class="dia-slot pratica">🛠️ 15min Árvore</div>
+        </div>
+      </div>
+      <div class="dia-card">
+        <div class="dia-header">QUI</div>
+        <div class="dia-body">
+          <div class="dia-slot revisao">🔄 30min Flashcards</div>
+          <div class="dia-slot quiz">❓ 20min Questões</div>
+        </div>
+      </div>
+      <div class="dia-card">
+        <div class="dia-header">SEX</div>
+        <div class="dia-body">
+          <div class="dia-slot teoria">📖 30min Revisão</div>
+          <div class="dia-slot pratica">🛠️ 30min Simulação</div>
+        </div>
+      </div>
+      <div class="dia-card">
+        <div class="dia-header">SÁB</div>
+        <div class="dia-body">
+          <div class="dia-slot simulado">🎯 60min Simulado</div>
+        </div>
+      </div>
+      <div class="dia-card">
+        <div class="dia-header">DOM</div>
+        <div class="dia-body">
+          <div class="dia-slot livre">💤 Descanso</div>
+          <div class="dia-slot revisao" style="font-size:10px;">15min Flashcards (opcional)</div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:20px;background:#f0f4f8;border-radius:8px;padding:16px;font-size:13px;color:var(--muted);">
+      <strong style="color:var(--text);">💡 Integração com o trabalho:</strong> Use os atendimentos do dia como laboratório. Após cada atendimento real, pergunte-se: "eu fiz a API corretamente? indiquei o produto certo? como eu explicaria o risco de forma mais clara?" Isso transforma o trabalho em estudo ativo.
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SIMULAÇÃO DE DIÁLOGO ===================== -->
+<div id="dialogo" class="screen">
+  <div class="section-label">8 · Simulações de Atendimento</div>
+
+  <div class="section">
+    <div class="section-title">🟢 Cliente Conservador — Perfil Preservação de Capital</div>
+    <div class="dialog-box">
+      <div class="dialog-msg cliente">
+        <div class="avatar">👤</div>
+        <div class="bubble">Oi, quero aplicar minha reserva de emergência de R$20.000. Não posso perder esse dinheiro e pode precisar do dinheiro a qualquer hora.</div>
+      </div>
+      <div class="dialog-msg agente">
+        <div class="avatar" style="background:#e8f0fe">🧑‍💼</div>
+        <div class="bubble">Perfeito! Para fazer a melhor recomendação, preciso te conhecer melhor. Posso fazer algumas perguntas rápidas sobre seus objetivos financeiros?</div>
+      </div>
+      <div class="dialog-msg cliente">
+        <div class="avatar">👤</div>
+        <div class="bubble">Claro, pode perguntar.</div>
+      </div>
+      <div class="dialog-msg agente">
+        <div class="avatar" style="background:#e8f0fe">🧑‍💼</div>
+        <div class="bubble">Você mencionou que pode precisar a qualquer hora — esse dinheiro é para emergências, né? Então liquidez diária é fundamental. Dado isso, o Tesouro Selic (LFT) e o CDB com liquidez diária seriam os mais adequados. Ambos têm cobertura do FGC até R$250k, rendimento acima da poupança e você resgata quando precisar. O que acha?</div>
+      </div>
+      <div class="dialog-msg cliente">
+        <div class="avatar">👤</div>
+        <div class="bubble">Tem diferença entre os dois?</div>
+      </div>
+      <div class="dialog-msg agente">
+        <div class="avatar" style="background:#e8f0fe">🧑‍💼</div>
+        <div class="bubble">Boa pergunta! O Tesouro Selic acompanha a taxa básica de juros — é o mais seguro do Brasil, emitido pelo governo federal. O CDB com liquidez diária também é muito seguro, com cobertura do FGC. Ambos são boas escolhas para reserva. Quer que eu simule os dois para você comparar?</div>
+      </div>
+    </div>
+    <div style="margin-top:12px;background:#e8f9ee;border-radius:8px;padding:12px 16px;font-size:12px;color:#1a7a3b;">
+      ✅ <strong>O que o agente fez certo:</strong> Fez a API antes de recomendar. Identificou a necessidade de liquidez. Apresentou produto aderente ao perfil. Não indicou renda variável para perfil conservador.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🟡 Cliente Moderado — Perfil Equilíbrio</div>
+    <div class="dialog-box">
+      <div class="dialog-msg cliente">
+        <div class="avatar">👤</div>
+        <div class="bubble">Tenho R$50.000 que não vou precisar por uns 5 anos. Quero algo que renda mais que a poupança, mas sem risco de perder tudo.</div>
+      </div>
+      <div class="dialog-msg agente">
+        <div class="avatar" style="background:#e8f0fe">🧑‍💼</div>
+        <div class="bubble">Ótimo horizonte! Com 5 anos, podemos diversificar. Primeiro, como você se sentiria se o saldo caísse 10% temporariamente — ficaria tranquilo ou ficaria preocupado?</div>
+      </div>
+      <div class="dialog-msg cliente">
+        <div class="avatar">👤</div>
+        <div class="bubble">Ficaria preocupado, mas entendo que é temporário se for de curto prazo.</div>
+      </div>
+      <div class="dialog-msg agente">
+        <div class="avatar" style="background:#e8f0fe">🧑‍💼</div>
+        <div class="bubble">Perfeito, isso é perfil moderado. Para 5 anos, uma sugestão seria: 60% em renda fixa (CDB ou Tesouro IPCA+) para proteger o capital e vencer a inflação, e 40% em fundo multimercado ou ações para potencializar o retorno. Esse mix equilibra segurança e crescimento. Posso detalhar cada parte?</div>
+      </div>
+    </div>
+    <div style="margin-top:12px;background:#e8f9ee;border-radius:8px;padding:12px 16px;font-size:12px;color:#1a7a3b;">
+      ✅ <strong>O que o agente fez certo:</strong> Fez perguntas para confirmar o perfil. Propôs carteira diversificada coerente com o horizonte de 5 anos. Explicou o racional da diversificação de forma simples.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🔴 Situação de Risco Ético — O que NÃO fazer</div>
+    <div class="dialog-box">
+      <div class="dialog-msg cliente">
+        <div class="avatar">👤</div>
+        <div class="bubble">Sou conservador mesmo, mas um amigo me falou que ação da Petrobras vai subir muito. Quero colocar tudo nisso.</div>
+      </div>
+      <div class="dialog-msg agente">
+        <div class="avatar" style="background:#e8f0fe">🧑‍💼</div>
+        <div class="bubble">Entendo, mas é importante que eu seja honesto com você. Ações têm alta volatilidade — podem cair significativamente antes de subir. Para o seu perfil conservador, isso não seria adequado. Posso te apresentar uma alternativa que captura parte desse potencial com menor risco?</div>
+      </div>
+    </div>
+    <div style="margin-top:12px;background:#fde8e8;border-radius:8px;padding:12px 16px;font-size:12px;color:#c0392b;">
+      ⚠️ <strong>Lembre-se:</strong> Mesmo que o cliente insista, oferecer produto inadequado ao perfil é irregularidade. O correto é registrar a discordância, explicar os riscos e, se o cliente persistir, documentar formalmente a decisão dele.
+    </div>
+  </div>
+</div>
+
+<!-- ===================== CHECKLIST ===================== -->
+<div id="checklist" class="screen">
+  <div class="section-label">9 · Checklist de Evolução Semanal</div>
+  <div class="check-grid">
+    <div class="check-card">
+      <div class="check-head">📋 Módulo 1 — SFN</div>
+      <div class="check-body">
+        <div class="check-item"><input type="checkbox"> <span>Sei o papel do CMN, BACEN, CVM, SUSEP e ANBIMA sem confundir</span></div>
+        <div class="check-item"><input type="checkbox"> <span>Consigo explicar o que o FGC cobre e o que não cobre</span></div>
+        <div class="check-item"><input type="checkbox"> <span>Sei qual sistema custodia qual ativo (SELIC vs B3)</span></div>
+        <div class="check-item"><input type="checkbox"> <span>Acertei 75%+ nas questões do Módulo 1</span></div>
+      </div>
+    </div>
+    <div class="check-card">
+      <div class="check-head">💰 Módulo 2 — Produtos</div>
+      <div class="check-body">
+        <div class="check-item"><input type="checkbox"> <span>Sei indicar o produto certo para cada perfil de cliente</span></div>
+        <div class="check-item"><input type="checkbox"> <span>Entendo a tributação de renda fixa, ações, fundos e previdência</span></div>
+        <div class="check-item"><input type="checkbox"> <span>Sei a diferença entre PGBL e VGBL na prática</span></div>
+        <div class="check-item"><input type="checkbox"> <span>Sei o que é come-cotas e quando não se aplica</span></div>
+        <div class="check-item"><input type="checkbox"> <span>Acertei 75%+ nas questões do Módulo 2</span></div>
+      </div>
+    </div>
+    <div class="check-card">
+      <div class="check-head">🤝 Módulo 3 — Relacionamento</div>
+      <div class="check-body">
+        <div class="check-item"><input type="checkbox"> <span>Consigo conduzir um atendimento com API do início ao fim</span></div>
+        <div class="check-item"><input type="checkbox"> <span>Sei os princípios do Código de Conduta Ética ANBIMA</span></div>
+        <div class="check-item"><input type="checkbox"> <span>Sei as 3 etapas da lavagem de dinheiro e o que fazer</span></div>
+        <div class="check-item"><input type="checkbox"> <span>Acertei 7/10 questões de árvore de diálogo</span></div>
+      </div>
+    </div>
+    <div class="check-card">
+      <div class="check-head">🚀 Módulo 4 — Inovação</div>
+      <div class="check-body">
+        <div class="check-item"><input type="checkbox"> <span>Sei explicar o que são criptomoedas de forma simples</span></div>
+        <div class="check-item"><input type="checkbox"> <span>Entendo o conceito de tokenização e DeFi</span></div>
+        <div class="check-item"><input type="checkbox"> <span>Sei o que é Open Finance e quem regulamenta</span></div>
+        <div class="check-item"><input type="checkbox"> <span>Acertei 75%+ nas questões do Módulo 4</span></div>
+      </div>
+    </div>
+    <div class="check-card">
+      <div class="check-head">🎯 Simulados</div>
+      <div class="check-body">
+        <div class="check-item"><input type="checkbox"> <span>Realizei simulado de 50 questões em 2h30</span></div>
+        <div class="check-item"><input type="checkbox"> <span>Cataloguei todos os erros por módulo</span></div>
+        <div class="check-item"><input type="checkbox"> <span>Atingi 75%+ (38 acertos) no simulado</span></div>
+        <div class="check-item"><input type="checkbox"> <span>Revi o tema de cada questão errada</span></div>
+      </div>
+    </div>
+    <div class="check-card">
+      <div class="check-head">🧠 Método de Estudo</div>
+      <div class="check-body">
+        <div class="check-item"><input type="checkbox"> <span>Fiz revisão espaçada (D1, D3, D7) dos temas</span></div>
+        <div class="check-item"><input type="checkbox"> <span>Usei técnica Feynman: expliquei cada módulo em voz alta</span></div>
+        <div class="check-item"><input type="checkbox"> <span>Criei flashcards para pontos fracos</span></div>
+        <div class="check-item"><input type="checkbox"> <span>Mantive rotina diária de 1h+ por pelo menos 5 dias na semana</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== MÉTODO ===================== -->
+<div id="metodo" class="screen">
+  <div class="section-label">10 · Método de Estudo</div>
+
+  <div class="metodo-grid">
+    <div class="metodo-card" style="border-top:4px solid var(--accent)">
+      <div class="metodo-icon">🔁</div>
+      <div class="metodo-title">Revisão Espaçada</div>
+      <div class="metodo-text">Após estudar um tema:<br>• Revisar no Dia 1 (mesma noite)<br>• Revisar no Dia 3<br>• Revisar no Dia 7<br>• Revisar no Dia 14<br><br>Flashcards são perfeitos para isso.</div>
+    </div>
+    <div class="metodo-card" style="border-top:4px solid var(--gold)">
+      <div class="metodo-icon">🧠</div>
+      <div class="metodo-title">Active Recall</div>
+      <div class="metodo-text">Em vez de reler, feche o material e tente se lembrar. Pergunte-se: "O que a CVM faz? Qual é a tributação do CDB?" Só depois confira. Esse esforço de memória é o que cria retenção.</div>
+    </div>
+    <div class="metodo-card" style="border-top:4px solid var(--green)">
+      <div class="metodo-icon">🎙️</div>
+      <div class="metodo-title">Técnica Feynman</div>
+      <div class="metodo-text">Para cada tema:<br>1. Explique em voz alta como se ensinasse a uma criança<br>2. Identifique onde travou<br>3. Volte ao material só nesses pontos<br>4. Simplifique ainda mais<br><br>Se não consegue explicar simples, não aprendeu.</div>
+    </div>
+    <div class="metodo-card" style="border-top:4px solid var(--red)">
+      <div class="metodo-icon">📊</div>
+      <div class="metodo-title">Análise de Erros</div>
+      <div class="metodo-text">Para cada simulado:<br>• Categorize erros por módulo<br>• Identifique padrões (ex: tributação, conceitos de órgãos)<br>• Dedique tempo extra ao tema que mais errou<br>• Meta: zerar o padrão de erro recorrente</div>
+    </div>
+    <div class="metodo-card" style="border-top:4px solid var(--mod3)">
+      <div class="metodo-icon">🎯</div>
+      <div class="metodo-title">Estratégia de Simulados</div>
+      <div class="metodo-text"><strong>Frequência:</strong> 1x/semana nas semanas 1-8; 2x/semana nas semanas 9-12<br><br><strong>Condições reais:</strong> Cronometrado, sem material, calculadora do sistema<br><br><strong>Meta progressiva:</strong> 60% → 70% → 80%</div>
+    </div>
+    <div class="metodo-card" style="border-top:4px solid #d35400">
+      <div class="metodo-icon">🏆</div>
+      <div class="metodo-title">Estratégia na Prova</div>
+      <div class="metodo-text">• Responda primeiro as que tem certeza<br>• Marque as duvidosas e volte depois<br>• Elimine alternativas claramente erradas<br>• Em caso de dúvida, confie no que estudou<br>• Atenção: questões visualizadas ficam bloqueadas — não pule sem responder</div>
+    </div>
+  </div>
+
+  <div class="section" style="margin-top:24px;">
+    <div class="section-title">📐 Cronograma de Revisão Espaçada</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Semana do estudo</th><th>D+1</th><th>D+3</th><th>D+7</th><th>D+14</th><th>Simulado</th></tr></thead>
+        <tbody>
+          <tr><td>S1 — SFN</td><td>✅ Revisar notas</td><td>✅ Flashcards</td><td>✅ 10 questões</td><td>✅ Integrar no simulado</td><td>S3, S5, S9, S11</td></tr>
+          <tr><td>S2 — Renda Fixa</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>S4, S6, S9, S11</td></tr>
+          <tr><td>S3 — RV + Fundos</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>S5, S7, S10, S11</td></tr>
+          <tr><td>S5 — API / KYC</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>S7, S8, S10, S11</td></tr>
+          <tr><td>S6 — Ética / PLD</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>S8, S9, S11, S12</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="section" style="margin-top:0;">
+    <div class="section-title">🚨 Plano Final — Últimas 4 Semanas</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Semana</th><th>Foco</th><th>Atividade central</th><th>Meta de acerto</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Semana 9</strong></td><td>Revisão M1 + M2</td><td>Técnica Feynman + questões por módulo</td><td>75% por módulo</td></tr>
+          <tr><td><strong>Semana 10</strong></td><td>Revisão M3 + M4</td><td>Árvores de diálogo + flashcards críticos</td><td>75% por módulo</td></tr>
+          <tr><td><strong>Semana 11</strong></td><td>Simulados completos</td><td>2 provas completas de 50 questões · 2h30</td><td>76%+ (38/50)</td></tr>
+          <tr><td><strong>Semana 12</strong></td><td>Ajuste fino + prova</td><td>Revisar erros · descansar 2 dias antes</td><td>80%+ no simulado final</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="margin-top:16px;background:#e8f0fe;border-radius:8px;padding:14px 18px;font-size:13px;">
+      🎯 <strong>Meta segura:</strong> Se você está acertando 80% (40/50) nos simulados, você pode ir à prova com tranquilidade. A barra oficial é 70% (35/50). Ter uma margem de segurança de 10% é o ideal.
+    </div>
+  </div>
+</div>
+
+</div><!-- end container -->
+
+<div class="footer">
+  📋 Plano de Estudo CPA ANBIMA 2026 · Baseado no Edital Oficial versão 1.2 (10 de abril de 2026) e na página anbimaedu.com.br/certificacao/cpa<br>
+  Taxa: R$225 · 50 questões · 2h30 · 35 acertos para aprovação · 4 módulos oficiais · Reconhecimento internacional EFPA
+</div>
+
+<script>
+// NAV
+function showSection(id, link) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.nav a').forEach(a => a.classList.remove('active'));
+  if (link) link.classList.add('active');
+  window.scrollTo(0, 0);
+}
+
+// QUESTÕES
+function resp(el, tipo) {
+  const parent = el.closest('.q-body');
+  parent.querySelectorAll('.q-alternativa').forEach(a => {
+    a.classList.remove('correta','errada');
+    a.style.pointerEvents = 'none';
+  });
+  el.classList.add(tipo);
+}
+function showGab(btn) {
+  const gab = btn.nextElementSibling;
+  gab.style.display = 'block';
+  btn.style.display = 'none';
+}
+
+// ACTIVE RECALL
+document.querySelectorAll('.check-item input').forEach(cb => {
+  cb.addEventListener('change', function() {
+    this.closest('.check-item').style.opacity = this.checked ? '0.5' : '1';
+  });
+});
+</script>
+</body>
+</html>
